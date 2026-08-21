@@ -1,0 +1,1973 @@
+https://github.com/scottyzen/woonuxt
+https://shopinvader.com/
+https://webdesksolution.com/headless-commerce-development/
+https://www.addwebsolution.com/our-capabilities/woocommerce-development
+https://www.axiswebart.com/white-label-woocommerce-development/
+https://www.elanq.com/en
+https://hornetdynamics.com/headless-commerce-development
+https://www.kusheldigi.com/service/headless-commerce
+https://woohl.dev/
+
+
+Yes. I searched specifically for companies/products that overlap with STOREFIRE’s actual proposition, rather than generic “headless commerce agencies.”
+
+The interesting bit is that STOREFIRE is sitting in a fairly specific gap: Nuxt/Vue frontend + existing commerce backend + server-side API abstraction + caching + deployment + testing/security, with WooCommerce and Odoo adapters.
+
+Closest matches
+Company / project	Woo	Odoo	Nuxt/Vue	What overlaps with STOREFIRE
+WooNuxt	✅	❌	✅	Very close on Nuxt + headless Woo
+Shopinvader	❌	✅	✅	Very close on Odoo + Nuxt
+WebDesk Solution	✅	❌	✅	Agency implementation of Nuxt/Woo headless
+AddWeb	✅	❌	✅	Enterprise headless Woo, explicitly supports Nuxt
+Axis Web Art	✅	❌	✅	Nuxt/Next + Woo headless services
+Elanq	❌	✅	✅	Odoo headless specialist
+Hornet Dynamics	✅	✅	various	Multi-backend headless agency
+Kushel Digi	✅	✅	Vue	Broad headless commerce implementation
+WooHL	✅	❌	Vue	Productised “turn Woo into Vue” proposition
+1. WooNuxt — probably your closest direct competitor
+
+This is the one I'd study hardest.
+
+WooNuxt describes itself as a Nuxt frontend for WooCommerce, with WooCommerce remaining the backend. It provides product/catalog functionality, cart, checkout, search, filtering, wishlist, PWA support, SEO and image optimisation.
+
+The architecture is strikingly close to part of STOREFIRE:
+
+WooCommerce → API/GraphQL → Nuxt → CDN
+
+But there is a significant difference.
+
+WooNuxt is primarily a storefront framework/template.
+
+STOREFIRE is becoming more like:
+
+Headless commerce infrastructure + storefront foundation + backend adapter + operational tooling.
+
+Your Odoo adapter alone moves you outside the normal WooNuxt proposition.
+
+2. Shopinvader — extremely interesting for the Odoo side
+
+This one is almost the mirror image of WooNuxt.
+
+Shopinvader specifically positions itself around:
+
+Odoo backend + API + Nuxt/Vue frontend.
+
+It has an Odoo API layer, Nuxt/Vue ecommerce frontend and an independent OpenSearch-powered search layer.
+
+That's particularly relevant because STOREFIRE already has:
+
+CommerceAdapter
+   ├── WooCommerce
+   └── Odoo
+
+So you've effectively arrived at a concept that exists commercially in the Odoo ecosystem, but you're combining it with WooCommerce rather than committing exclusively to Odoo.
+
+That's potentially a very good positioning angle.
+
+3. WebDesk Solution
+
+More conventional agency competitor.
+
+They explicitly offer:
+
+WooCommerce
+Next.js
+Vue/Nuxt
+REST
+GraphQL
+webhooks
+headless migrations
+Cloudflare/Vercel deployments
+
+They describe their architecture as frontend → APIs → commerce core → CMS, which is conceptually close to what you're building.
+
+Their WooCommerce service specifically mentions Nuxt, REST/GraphQL and SSR/ISR.
+
+The distinction is that they're selling agency development services, whereas STOREFIRE can be sold as a reusable foundation.
+
+4. AddWeb
+
+Another serious competitor if you're thinking commercially rather than merely technically.
+
+They explicitly advertise headless WooCommerce using Next.js, Nuxt or Astro, and WooCommerce Store API/GraphQL. They also position headless around non-standard UX, app-like performance and multi-channel commerce.
+
+Their model is essentially:
+
+pay us to build your headless commerce system.
+
+Yours could be:
+
+start with our production-tested commerce foundation and customise it.
+
+That's a rather different proposition.
+
+5. Axis Web Art
+
+This is particularly relevant because they're explicitly talking about white-label WooCommerce development for agencies.
+
+They offer headless WooCommerce using Next.js or Nuxt.js, REST or GraphQL, with use cases including high-performance stores and B2B/customer portals.
+
+That starts getting close to the potential STOREFIRE business model:
+
+agency → client → headless commerce implementation
+
+rather than:
+
+end customer → SaaS platform.
+
+6. Elanq
+
+Worth looking at if the Odoo adapter becomes an important part of STOREFIRE.
+
+They're specifically an Odoo headless-commerce specialist and mention Odoo, frontend, Redis caching, UX, SEO, CRO and GTM. They also work with Alokai, which is another headless frontend layer capable of connecting to Odoo, Shopify, Magento, Adobe Commerce and WooCommerce.
+
+Again, you're approaching the same architectural territory.
+
+7. Hornet Dynamics
+
+This is the broadest competitor I found.
+
+They advertise headless implementations across:
+
+Odoo
+WooCommerce
+Shopify
+Magento
+Shopware
+BigCommerce
+OpenCart
+PrestaShop
+Pimcore
+etc.
+
+They're essentially selling headless commerce as an agency capability, rather than a particular technical foundation.
+
+8. Kushel Digi Solutions
+
+Another broad implementation agency.
+
+They explicitly offer both Odoo headless and WooCommerce headless, with Vue/React-style frontends and migration/integration work.
+
+Again, useful as a competitor benchmark but not necessarily a direct product competitor.
+
+9. WooHL
+
+This is an interesting one because it goes in the productised direction.
+
+Their pitch is essentially:
+
+Take your existing WooCommerce store and turn it into a Vue frontend.
+
+They provide a Vue frontend package, WooCommerce plugin and API configuration, with a deliberately simple onboarding process.
+
+That's much closer to the commercial shape I think STOREFIRE could eventually take.
+
+And there's another one worth watching
+
+NuxtCommerce on GitHub is an open-source Nuxt 4/WooCommerce headless storefront.
+
+It uses:
+
+Nuxt 4
+Nitro
+GraphQL
+WooGraphQL
+SWR caching
+NuxtHub/KV
+Cloudflare Workers
+product/search/cart/checkout
+Playwright-style modern frontend architecture
+
+That is technically much closer to STOREFIRE than most of the agencies above.
+
+But here's the important bit
+
+I wouldn't look at these and conclude:
+
+“Shit, this already exists.”
+
+I don't think it does — not in the exact form you've built.
+
+The market appears to break roughly into four camps:
+
+                 HEADLESS COMMERCE
+
+
+          ┌─────────────┴─────────────┐
+
+
+       FRAMEWORKS                  AGENCIES
+          │                            │
+       WooNuxt                    WebDesk
+       NuxtCommerce               AddWeb
+                                  Axis
+                                  Hornet
+                                  Kushel
+
+
+          │
+          │
+          ▼
+
+
+   BACKEND-SPECIFIC SYSTEMS
+
+
+   WooCommerce → WooNuxt
+   Odoo       → Shopinvader
+
+
+
+
+                    STOREFIRE
+                       │
+                       ▼
+          ┌─────────────────────────┐
+          │   COMMERCE AGNOSTIC     │
+          │                         │
+          │ Nuxt 4 + Nitro          │
+          │ WooCommerce             │
+          │ Odoo                    │
+          │ API abstraction         │
+          │ caching                 │
+          │ security                │
+          │ E2E testing             │
+          │ load testing            │
+          │ observability           │
+          │ deployment              │
+          │ backup/runbooks         │
+          └─────────────────────────┘
+
+That's the interesting commercial distinction.
+
+Most of these companies are selling either:
+
+a frontend, or
+development services, or
+a backend-specific headless solution.
+
+STOREFIRE is shaping up to be a repeatable headless commerce deployment system.
+
+And you've got something particularly useful hiding in plain sight:
+
+const commerce = useCommerce()
+
+The frontend doesn't care whether the merchant is running:
+
+WooCommerce
+      ↓
+STOREFIRE
+      ↓
+Nuxt
+
+or:
+
+Odoo
+  ↓
+STOREFIRE
+  ↓
+Nuxt
+
+That abstraction is potentially the actual product, not the Nuxt template.
+
+If I were positioning this commercially, I'd investigate three markets separately: white-label agency infrastructure, merchant migration/modernisation, and a licensable starter platform for developers. That's where I think the competitive landscape gets much more interesting than simply calling it a “Nuxt ecommerce template.”
+
+
+Yes. I searched specifically for companies/products that overlap with STOREFIRE’s actual proposition, rather than generic “headless commerce agencies.”
+
+The interesting bit is that STOREFIRE is sitting in a fairly specific gap: Nuxt/Vue frontend + existing commerce backend + server-side API abstraction + caching + deployment + testing/security, with WooCommerce and Odoo adapters.
+
+Closest matches
+Company / project | Woo | Odoo | Nuxt/Vue | What overlaps with STOREFIRE -- | -- | -- | -- | -- WooNuxt | ✅ | ❌ | ✅ | Very close on Nuxt + headless Woo Shopinvader | ❌ | ✅ | ✅ | Very close on Odoo + Nuxt WebDesk Solution | ✅ | ❌ | ✅ | Agency implementation of Nuxt/Woo headless AddWeb | ✅ | ❌ | ✅ | Enterprise headless Woo, explicitly supports Nuxt Axis Web Art | ✅ | ❌ | ✅ | Nuxt/Next + Woo headless services Elanq | ❌ | ✅ | ✅ | Odoo headless specialist Hornet Dynamics | ✅ | ✅ | various | Multi-backend headless agency Kushel Digi | ✅ | ✅ | Vue | Broad headless commerce implementation WooHL | ✅ | ❌ | Vue | Productised “turn Woo into Vue” proposition
+1. WooNuxt — probably your closest direct competitor
+This is the one I'd study hardest.
+
+WooNuxt describes itself as a Nuxt frontend for WooCommerce, with WooCommerce remaining the backend. It provides product/catalog functionality, cart, checkout, search, filtering, wishlist, PWA support, SEO and image optimisation.
+
+The architecture is strikingly close to part of STOREFIRE:
+
+WooCommerce → API/GraphQL → Nuxt → CDN
+
+But there is a significant difference.
+
+WooNuxt is primarily a storefront framework/template.
+
+STOREFIRE is becoming more like:
+
+Headless commerce infrastructure + storefront foundation + backend adapter + operational tooling.
+
+Your Odoo adapter alone moves you outside the normal WooNuxt proposition.
+
+2. Shopinvader — extremely interesting for the Odoo side
+This one is almost the mirror image of WooNuxt.
+
+Shopinvader specifically positions itself around:
+
+Odoo backend + API + Nuxt/Vue frontend.
+
+It has an Odoo API layer, Nuxt/Vue ecommerce frontend and an independent OpenSearch-powered search layer.
+
+That's particularly relevant because STOREFIRE already has:
+
+CommerceAdapter
+   ├── WooCommerce
+   └── Odoo
+So you've effectively arrived at a concept that exists commercially in the Odoo ecosystem, but you're combining it with WooCommerce rather than committing exclusively to Odoo.
+
+That's potentially a very good positioning angle.
+
+3. WebDesk Solution
+More conventional agency competitor.
+
+They explicitly offer:
+
+WooCommerce
+Next.js
+Vue/Nuxt
+REST
+GraphQL
+webhooks
+headless migrations
+Cloudflare/Vercel deployments
+They describe their architecture as frontend → APIs → commerce core → CMS, which is conceptually close to what you're building.
+
+Their WooCommerce service specifically mentions Nuxt, REST/GraphQL and SSR/ISR.
+
+The distinction is that they're selling agency development services, whereas STOREFIRE can be sold as a reusable foundation.
+
+4. AddWeb
+Another serious competitor if you're thinking commercially rather than merely technically.
+
+They explicitly advertise headless WooCommerce using Next.js, Nuxt or Astro, and WooCommerce Store API/GraphQL. They also position headless around non-standard UX, app-like performance and multi-channel commerce.
+
+Their model is essentially:
+
+pay us to build your headless commerce system.
+
+Yours could be:
+
+start with our production-tested commerce foundation and customise it.
+
+That's a rather different proposition.
+
+5. Axis Web Art
+This is particularly relevant because they're explicitly talking about white-label WooCommerce development for agencies.
+
+They offer headless WooCommerce using Next.js or Nuxt.js, REST or GraphQL, with use cases including high-performance stores and B2B/customer portals.
+
+That starts getting close to the potential STOREFIRE business model:
+
+agency → client → headless commerce implementation
+
+rather than:
+
+end customer → SaaS platform.
+
+6. Elanq
+Worth looking at if the Odoo adapter becomes an important part of STOREFIRE.
+
+They're specifically an Odoo headless-commerce specialist and mention Odoo, frontend, Redis caching, UX, SEO, CRO and GTM. They also work with Alokai, which is another headless frontend layer capable of connecting to Odoo, Shopify, Magento, Adobe Commerce and WooCommerce.
+
+Again, you're approaching the same architectural territory.
+
+7. Hornet Dynamics
+This is the broadest competitor I found.
+
+They advertise headless implementations across:
+
+Odoo
+WooCommerce
+Shopify
+Magento
+Shopware
+BigCommerce
+OpenCart
+PrestaShop
+Pimcore
+etc.
+
+They're essentially selling headless commerce as an agency capability, rather than a particular technical foundation.
+
+8. Kushel Digi Solutions
+Another broad implementation agency.
+
+They explicitly offer both Odoo headless and WooCommerce headless, with Vue/React-style frontends and migration/integration work.
+
+Again, useful as a competitor benchmark but not necessarily a direct product competitor.
+
+9. WooHL
+This is an interesting one because it goes in the productised direction.
+
+Their pitch is essentially:
+
+Take your existing WooCommerce store and turn it into a Vue frontend.
+
+They provide a Vue frontend package, WooCommerce plugin and API configuration, with a deliberately simple onboarding process.
+
+That's much closer to the commercial shape I think STOREFIRE could eventually take.
+
+And there's another one worth watching
+NuxtCommerce on GitHub is an open-source Nuxt 4/WooCommerce headless storefront.
+
+It uses:
+
+Nuxt 4
+Nitro
+GraphQL
+WooGraphQL
+SWR caching
+NuxtHub/KV
+Cloudflare Workers
+product/search/cart/checkout
+Playwright-style modern frontend architecture
+
+That is technically much closer to STOREFIRE than most of the agencies above.
+
+But here's the important bit
+I wouldn't look at these and conclude:
+
+“Shit, this already exists.”
+
+I don't think it does — not in the exact form you've built.
+
+The market appears to break roughly into four camps:
+
+                 HEADLESS COMMERCE
+
+          ┌─────────────┴─────────────┐
+
+       FRAMEWORKS                  AGENCIES
+          │                            │
+       WooNuxt                    WebDesk
+       NuxtCommerce               AddWeb
+                                  Axis
+                                  Hornet
+                                  Kushel
+
+          │
+          │
+          ▼
+
+   BACKEND-SPECIFIC SYSTEMS
+
+   WooCommerce → WooNuxt
+   Odoo       → Shopinvader
+
+
+                    STOREFIRE
+                       │
+                       ▼
+          ┌─────────────────────────┐
+          │   COMMERCE AGNOSTIC     │
+          │                         │
+          │ Nuxt 4 + Nitro          │
+          │ WooCommerce             │
+          │ Odoo                    │
+          │ API abstraction         │
+          │ caching                 │
+          │ security                │
+          │ E2E testing             │
+          │ load testing            │
+          │ observability           │
+          │ deployment              │
+          │ backup/runbooks         │
+          └─────────────────────────┘
+That's the interesting commercial distinction.
+
+Most of these companies are selling either:
+
+a frontend, or
+development services, or
+a backend-specific headless solution.
+STOREFIRE is shaping up to be a repeatable headless commerce deployment system.
+
+And you've got something particularly useful hiding in plain sight:
+
+const commerce = useCommerce()
+The frontend doesn't care whether the merchant is running:
+
+WooCommerce
+      ↓
+STOREFIRE
+      ↓
+Nuxt
+or:
+
+Odoo
+  ↓
+STOREFIRE
+  ↓
+Nuxt
+That abstraction is potentially the actual product, not the Nuxt template.
+
+If I were positioning this commercially, I'd investigate three markets separately: white-label agency infrastructure, merchant migration/modernisation, and a licensable starter platform for developers. That's where I think the competitive landscape gets much more interesting than simply calling it a “Nuxt ecommerce template.”
+
+Yes. I searched specifically for companies/products that overlap with STOREFIRE’s actual proposition, rather than generic “headless commerce agencies.”
+The interesting bit is that STOREFIRE is sitting in a fairly specific gap: Nuxt/Vue frontend + existing commerce backend + server-side API abstraction + caching + deployment + testing/security, with WooCommerce and Odoo adapters.
+
+Closest matches
+Company / project Woo Odoo Nuxt/Vue What overlaps with STOREFIRE
+WooNuxt ✅ ❌ ✅ Very close on Nuxt + headless Woo
+Shopinvader ❌ ✅ ✅ Very close on Odoo + Nuxt
+WebDesk Solution ✅ ❌ ✅ Agency implementation of Nuxt/Woo headless
+AddWeb ✅ ❌ ✅ Enterprise headless Woo, explicitly supports Nuxt
+Axis Web Art ✅ ❌ ✅ Nuxt/Next + Woo headless services
+Elanq ❌ ✅ ✅ Odoo headless specialist
+Hornet Dynamics ✅ ✅ various Multi-backend headless agency
+Kushel Digi ✅ ✅ Vue Broad headless commerce implementation
+WooHL ✅ ❌ Vue Productised “turn Woo into Vue” proposition
+
+WooNuxt — probably your closest direct competitor
+This is the one I'd study hardest.
+
+WooNuxt describes itself as a Nuxt frontend for WooCommerce, with WooCommerce remaining the backend. It provides product/catalog functionality, cart, checkout, search, filtering, wishlist, PWA support, SEO and image optimisation.
+
+The architecture is strikingly close to part of STOREFIRE:
+
+WooCommerce → API/GraphQL → Nuxt → CDN
+
+But there is a significant difference.
+
+WooNuxt is primarily a storefront framework/template.
+
+STOREFIRE is becoming more like:
+
+Headless commerce infrastructure + storefront foundation + backend adapter + operational tooling.
+
+Your Odoo adapter alone moves you outside the normal WooNuxt proposition.
+
+Shopinvader — extremely interesting for the Odoo side
+This one is almost the mirror image of WooNuxt.
+
+Shopinvader specifically positions itself around:
+
+Odoo backend + API + Nuxt/Vue frontend.
+
+It has an Odoo API layer, Nuxt/Vue ecommerce frontend and an independent OpenSearch-powered search layer.
+
+That's particularly relevant because STOREFIRE already has:
+
+CommerceAdapter
+├── WooCommerce
+└── Odoo
+
+So you've effectively arrived at a concept that exists commercially in the Odoo ecosystem, but you're combining it with WooCommerce rather than committing exclusively to Odoo.
+
+That's potentially a very good positioning angle.
+
+WebDesk Solution
+More conventional agency competitor.
+
+They explicitly offer:
+
+WooCommerce
+Next.js
+Vue/Nuxt
+REST
+GraphQL
+webhooks
+headless migrations
+Cloudflare/Vercel deployments
+
+They describe their architecture as frontend → APIs → commerce core → CMS, which is conceptually close to what you're building.
+
+Their WooCommerce service specifically mentions Nuxt, REST/GraphQL and SSR/ISR.
+
+The distinction is that they're selling agency development services, whereas STOREFIRE can be sold as a reusable foundation.
+
+AddWeb
+Another serious competitor if you're thinking commercially rather than merely technically.
+
+They explicitly advertise headless WooCommerce using Next.js, Nuxt or Astro, and WooCommerce Store API/GraphQL. They also position headless around non-standard UX, app-like performance and multi-channel commerce.
+
+Their model is essentially:
+
+pay us to build your headless commerce system.
+
+Yours could be:
+
+start with our production-tested commerce foundation and customise it.
+
+That's a rather different proposition.
+
+Axis Web Art
+This is particularly relevant because they're explicitly talking about white-label WooCommerce development for agencies.
+
+They offer headless WooCommerce using Next.js or Nuxt.js, REST or GraphQL, with use cases including high-performance stores and B2B/customer portals.
+
+That starts getting close to the potential STOREFIRE business model:
+
+agency → client → headless commerce implementation
+
+rather than:
+
+end customer → SaaS platform.
+
+Elanq
+Worth looking at if the Odoo adapter becomes an important part of STOREFIRE.
+
+They're specifically an Odoo headless-commerce specialist and mention Odoo, frontend, Redis caching, UX, SEO, CRO and GTM. They also work with Alokai, which is another headless frontend layer capable of connecting to Odoo, Shopify, Magento, Adobe Commerce and WooCommerce.
+
+Again, you're approaching the same architectural territory.
+
+Hornet Dynamics
+This is the broadest competitor I found.
+
+They advertise headless implementations across:
+
+Odoo
+WooCommerce
+Shopify
+Magento
+Shopware
+BigCommerce
+OpenCart
+PrestaShop
+Pimcore
+etc.
+
+They're essentially selling headless commerce as an agency capability, rather than a particular technical foundation.
+
+Kushel Digi Solutions
+Another broad implementation agency.
+
+They explicitly offer both Odoo headless and WooCommerce headless, with Vue/React-style frontends and migration/integration work.
+
+Again, useful as a competitor benchmark but not necessarily a direct product competitor.
+
+WooHL
+This is an interesting one because it goes in the productised direction.
+
+Their pitch is essentially:
+
+Take your existing WooCommerce store and turn it into a Vue frontend.
+
+They provide a Vue frontend package, WooCommerce plugin and API configuration, with a deliberately simple onboarding process.
+
+That's much closer to the commercial shape I think STOREFIRE could eventually take.
+
+And there's another one worth watching
+
+NuxtCommerce on GitHub is an open-source Nuxt 4/WooCommerce headless storefront.
+
+It uses:
+
+Nuxt 4
+Nitro
+GraphQL
+WooGraphQL
+SWR caching
+NuxtHub/KV
+Cloudflare Workers
+product/search/cart/checkout
+Playwright-style modern frontend architecture
+
+That is technically much closer to STOREFIRE than most of the agencies above.
+
+But here's the important bit
+
+I wouldn't look at these and conclude:
+
+“Shit, this already exists.”
+
+I don't think it does — not in the exact form you've built.
+
+The market appears to break roughly into four camps:
+
+             HEADLESS COMMERCE
+
+
+      ┌─────────────┴─────────────┐
+
+
+   FRAMEWORKS                  AGENCIES
+      │                            │
+   WooNuxt                    WebDesk
+   NuxtCommerce               AddWeb
+                              Axis
+                              Hornet
+                              Kushel
+
+
+      │
+      │
+      ▼
+BACKEND-SPECIFIC SYSTEMS
+
+WooCommerce → WooNuxt
+Odoo → Shopinvader
+
+                STOREFIRE
+                   │
+                   ▼
+      ┌─────────────────────────┐
+      │   COMMERCE AGNOSTIC     │
+      │                         │
+      │ Nuxt 4 + Nitro          │
+      │ WooCommerce             │
+      │ Odoo                    │
+      │ API abstraction         │
+      │ caching                 │
+      │ security                │
+      │ E2E testing             │
+      │ load testing            │
+      │ observability           │
+      │ deployment              │
+      │ backup/runbooks         │
+      └─────────────────────────┘
+That's the interesting commercial distinction.
+
+Most of these companies are selling either:
+
+a frontend, or
+development services, or
+a backend-specific headless solution.
+
+STOREFIRE is shaping up to be a repeatable headless commerce deployment system.
+
+And you've got something particularly useful hiding in plain sight:
+
+const commerce = useCommerce()
+
+The frontend doesn't care whether the merchant is running:
+
+WooCommerce
+↓
+STOREFIRE
+↓
+Nuxt
+
+or:
+
+Odoo
+↓
+STOREFIRE
+↓
+Nuxt
+
+That abstraction is potentially the actual product, not the Nuxt template.
+
+If I were positioning this commercially, I'd investigate three markets separately: white-label agency infrastructure, merchant migration/modernisation, and a licensable starter platform for developers. That's where I think the competitive landscape gets much more interesting than simply calling it a “Nuxt ecommerce template.”
+
+the-junglist commented 6 minutes ago
+@the-junglist
+the-junglist
+6m ago
+Author
+Yes — and after checking the actual sites/repos, WooNuxt is much less mysterious than it initially looked. It is not a scam or some opaque SaaS.
+
+1. WooNuxt — essentially open source
+The GitHub repo is public, has about 966 stars / 304 forks, and is explicitly licensed GPL-3.0.
+
+WooNuxt GitHub repository
+
+The website is basically the showcase/documentation/entry point for that open-source project. The actual stack is:
+
+WooCommerce
+    ↓
+WPGraphQL
+    ↓
+WooGraphQL
+    ↓
+WooNuxt
+    ↓
+Nuxt/Vue
+The required WordPress plugins are also open-source/public; the WooNuxt Settings plugin is on GitHub too.
+
+And the website itself tells you to install the plugin, configure the frontend and deploy it wherever you like.
+
+So: free or freemium?
+Free/open-source.
+
+I don't see evidence that WooNuxt is a "free demo with a paid SaaS hiding behind it." The core project is genuinely open source under GPL-3.0.
+
+There may obviously be commercial work/services around the ecosystem, but the software itself is open source.
+
+And this makes your observation important:
+
+WooNuxt is basically what you started with.
+
+Except STOREFIRE has evolved beyond it.
+
+2. The really interesting comparison
+WooNuxt:
+
+             WooCommerce
+                  │
+            WPGraphQL
+                  │
+              WooNuxt
+                  │
+             Nuxt/Vue
+STOREFIRE:
+
+              Commerce
+             /         \
+     WooCommerce       Odoo
+           \             /
+            CommerceAdapter
+                   │
+               Nitro API
+                   │
+                Nuxt 4
+Then STOREFIRE adds:
+
+        ┌─────────────────────┐
+        │      STOREFIRE      │
+        ├─────────────────────┤
+        │ Commerce adapters   │
+        │ Nitro API           │
+        │ caching             │
+        │ cart                │
+        │ checkout            │
+        │ security            │
+        │ Playwright          │
+        │ k6                  │
+        │ logging             │
+        │ observability       │
+        │ Cloudflare          │
+        │ deployment          │
+        │ backup/runbooks     │
+        └─────────────────────┘
+That's a materially different proposition.
+
+3. Shopinvader — also genuinely open source, but commercial ecosystem around it
+This one is fascinating.
+
+Their own website explicitly calls the product:
+
+"Odoo open source Headless eCommerce"
+
+and says both the Odoo FastAPI backend and Nuxt/Vue frontend are open source.
+
+So again, not a conventional SaaS where you pay to use their frontend.
+
+But there is a commercial ecosystem around it.
+
+They list several companies as main contributors:
+
+Acsone
+Akretion
+Camptocamp
+ForgeFlow
+and invite businesses to get in touch for a complete backend/frontend demo.
+
+So I'd classify Shopinvader as:
+
+Open-source technology + commercial professional services/ecosystem.
+
+That's a very important distinction.
+
+It's basically the Odoo equivalent of the direction you're heading in.
+
+4. Axis Web Art — completely different beast
+Axis isn't selling a software product.
+
+It's a commercial white-label development agency.
+
+Their pitch is basically:
+
+You sell the project. We build it. Your client doesn't know we exist.
+
+They say they have 40+ agency partners and 50+ in-house developers/designers.
+
+Their WooCommerce service explicitly includes headless builds using:
+
+Next.js
+Nuxt.js
+WooCommerce REST API
+WPGraphQL
+WooGraphQL
+
+Commercial model
+100% services.
+
+Not open-source software competition.
+
+They're selling developer capacity.
+
+In fact, I'd put Axis in a completely different box:
+
+STOREFIRE                  AXIS
+
+software foundation       people
+        ↓                   ↓
+repeatable builds         custom builds
+        ↓                   ↓
+many clients              client projects
+They could potentially be a customer of something like STOREFIRE, rather than necessarily a competitor.
+
+5. AddWeb — also services
+AddWeb is another commercial development company.
+
+WooCommerce lists them as having 13+ years of WooCommerce experience, 1,100+ clients and 160+ in-house developers. Their services include custom WooCommerce, integrations, maintenance and headless builds.
+
+They explicitly say they'll do headless WooCommerce when it actually makes sense rather than automatically pushing it.
+
+Their commercial model is:
+
+pay AddWeb to build/maintain the thing.
+
+There isn't a competing STOREFIRE-style open-source product sitting underneath their website that I can see.
+
+6. WooHL — this one needs more investigation
+WooHL is interesting because it looks more like a productised solution than Axis/AddWeb.
+
+But I wouldn't currently put it in the same confidence category as WooNuxt or Shopinvader without digging into its repository/licensing/business model further.
+
+This is one I'd put on the:
+
+"Investigate properly before drawing conclusions"
+
+list.
+
+7. Elanq — commercial Odoo specialist
+Elanq is essentially an Odoo commerce implementation company.
+
+So:
+
+commercial services, not an obvious direct STOREFIRE software competitor.
+
+Its relevance is architectural: they're solving the same broad problem of separating Odoo from the customer-facing commerce frontend.
+
+8. Hornet Dynamics — commercial agency
+Same story.
+
+They're selling headless commerce development across multiple commerce platforms.
+
+That's:
+
+agency/integration business, rather than a competing open-source framework.
+
+9. Kushel Digi — commercial agency
+Again:
+
+services company.
+
+They build headless systems across WooCommerce, Odoo and other platforms.
+
+Interesting competitor from a services-market perspective, but not really from the "someone can clone STOREFIRE from their GitHub repo" perspective.
+
+The landscape is actually much cleaner than I initially made it sound
+I'd revise my earlier competitor table like this:
+
+  | Open source product | Commercial software | Commercial services -- | -- | -- | -- WooNuxt | 🟢 | — | Possible ecosystem/services NuxtCommerce | 🟢 | — | — Shopinvader | 🟢 | — | 🟢 WooHL | ? | ? | ? Axis Web Art | — | — | 🟢 AddWeb | — | — | 🟢 Elanq | — | — | 🟢 Hornet Dynamics | — | — | 🟢 Kushel Digi | — | — | 🟢
+And that's actually good news for STOREFIRE.
+
+Because your competition isn't a wall of SaaS companies charging merchants $X/month for essentially the same thing.
+
+There's another important thing I noticed
+WooNuxt is not even trying to hide what it is.
+
+Their README says:
+
+"Static e-commerce powered by WooCommerce & Nuxt"
+
+and the project is GPL-3.0.
+
+The feature set is also very storefront-oriented:
+
+products
+cart
+search
+shipping
+checkout
+filtering
+wishlist
+account
+coupons
+reviews
+categories
+PWA
+localisation
+
+Whereas your README reads more like:
+
+"Here's the fucking infrastructure required to repeatedly deploy this architecture in the real world."
+
+That's the difference I'd preserve.
+
+And here's the bit I'd investigate next
+Don't spend too much time comparing the visual storefronts.
+
+I'd dig into how each project makes money and what they actually sell around the open-source core.
+
+Particularly:
+
+WooNuxt
+Who maintains it?
+Does the maintainer sell development?
+Is there paid support?
+Are there paid modules?
+Is the GPL code usable commercially?
+What's the actual business behind it?
+Shopinvader
+This is the most interesting model for STOREFIRE.
+Open-source core + Odoo integrators.
+Find out exactly what the commercial companies sell.
+That's potentially a business model analogue.
+WooHL
+Determine whether it's actually open source.
+Find pricing.
+Find ownership.
+Find GitHub.
+Find what the customer actually buys.
+NuxtCommerce
+Who owns it?
+License?
+Is it simply an OSS project?
+Any commercial offering?
+The agencies
+Less technically interesting.
+More useful for figuring out what customers currently pay humans to build that STOREFIRE could standardise.
+And that last question is probably the money question.
+
+Because if an agency is charging a client £5k/£10k/£20k to repeatedly build:
+
+WooCommerce
+     +
+API integration
+     +
+Nuxt
+     +
+Cloudflare
+     +
+cache
+     +
+cart
+     +
+checkout
+     +
+security
+     +
+testing
+     +
+deployment
+then STOREFIRE doesn't necessarily need to beat WooNuxt.
+
+It needs to make that whole agency job substantially faster and more repeatable.
+
+That's a much more interesting proposition.
+
+Yes — and after checking the actual sites/repos, WooNuxt is much less mysterious than it initially looked. It is not a scam or some opaque SaaS.
+WooNuxt — essentially open source
+The GitHub repo is public, has about 966 stars / 304 forks, and is explicitly licensed GPL-3.0.
+
+WooNuxt GitHub repository
+
+The website is basically the showcase/documentation/entry point for that open-source project. The actual stack is:
+
+WooCommerce
+↓
+WPGraphQL
+↓
+WooGraphQL
+↓
+WooNuxt
+↓
+Nuxt/Vue
+
+The required WordPress plugins are also open-source/public; the WooNuxt Settings plugin is on GitHub too.
+
+And the website itself tells you to install the plugin, configure the frontend and deploy it wherever you like.
+
+So: free or freemium?
+
+Free/open-source.
+
+I don't see evidence that WooNuxt is a "free demo with a paid SaaS hiding behind it." The core project is genuinely open source under GPL-3.0.
+
+There may obviously be commercial work/services around the ecosystem, but the software itself is open source.
+
+And this makes your observation important:
+
+WooNuxt is basically what you started with.
+
+Except STOREFIRE has evolved beyond it.
+
+The really interesting comparison
+WooNuxt:
+
+         WooCommerce
+              │
+        WPGraphQL
+              │
+          WooNuxt
+              │
+         Nuxt/Vue
+STOREFIRE:
+
+          Commerce
+         /         \
+ WooCommerce       Odoo
+       \             /
+        CommerceAdapter
+               │
+           Nitro API
+               │
+            Nuxt 4
+Then STOREFIRE adds:
+
+    ┌─────────────────────┐
+    │      STOREFIRE      │
+    ├─────────────────────┤
+    │ Commerce adapters   │
+    │ Nitro API           │
+    │ caching             │
+    │ cart                │
+    │ checkout            │
+    │ security            │
+    │ Playwright          │
+    │ k6                  │
+    │ logging             │
+    │ observability       │
+    │ Cloudflare          │
+    │ deployment          │
+    │ backup/runbooks     │
+    └─────────────────────┘
+That's a materially different proposition.
+
+Shopinvader — also genuinely open source, but commercial ecosystem around it
+This one is fascinating.
+
+Their own website explicitly calls the product:
+
+"Odoo open source Headless eCommerce"
+
+and says both the Odoo FastAPI backend and Nuxt/Vue frontend are open source.
+
+So again, not a conventional SaaS where you pay to use their frontend.
+
+But there is a commercial ecosystem around it.
+
+They list several companies as main contributors:
+
+Acsone
+Akretion
+Camptocamp
+ForgeFlow
+
+and invite businesses to get in touch for a complete backend/frontend demo.
+
+So I'd classify Shopinvader as:
+
+Open-source technology + commercial professional services/ecosystem.
+
+That's a very important distinction.
+
+It's basically the Odoo equivalent of the direction you're heading in.
+
+Axis Web Art — completely different beast
+Axis isn't selling a software product.
+
+It's a commercial white-label development agency.
+
+Their pitch is basically:
+
+You sell the project. We build it. Your client doesn't know we exist.
+
+They say they have 40+ agency partners and 50+ in-house developers/designers.
+
+Their WooCommerce service explicitly includes headless builds using:
+
+Next.js
+Nuxt.js
+WooCommerce REST API
+WPGraphQL
+WooGraphQL
+
+Commercial model
+
+100% services.
+
+Not open-source software competition.
+
+They're selling developer capacity.
+
+In fact, I'd put Axis in a completely different box:
+
+STOREFIRE AXIS
+
+software foundation people
+↓ ↓
+repeatable builds custom builds
+↓ ↓
+many clients client projects
+
+They could potentially be a customer of something like STOREFIRE, rather than necessarily a competitor.
+
+AddWeb — also services
+AddWeb is another commercial development company.
+
+WooCommerce lists them as having 13+ years of WooCommerce experience, 1,100+ clients and 160+ in-house developers. Their services include custom WooCommerce, integrations, maintenance and headless builds.
+
+They explicitly say they'll do headless WooCommerce when it actually makes sense rather than automatically pushing it.
+
+Their commercial model is:
+
+pay AddWeb to build/maintain the thing.
+
+There isn't a competing STOREFIRE-style open-source product sitting underneath their website that I can see.
+
+WooHL — this one needs more investigation
+WooHL is interesting because it looks more like a productised solution than Axis/AddWeb.
+
+But I wouldn't currently put it in the same confidence category as WooNuxt or Shopinvader without digging into its repository/licensing/business model further.
+
+This is one I'd put on the:
+
+"Investigate properly before drawing conclusions"
+
+list.
+
+Elanq — commercial Odoo specialist
+Elanq is essentially an Odoo commerce implementation company.
+
+So:
+
+commercial services, not an obvious direct STOREFIRE software competitor.
+
+Its relevance is architectural: they're solving the same broad problem of separating Odoo from the customer-facing commerce frontend.
+
+Hornet Dynamics — commercial agency
+Same story.
+
+They're selling headless commerce development across multiple commerce platforms.
+
+That's:
+
+agency/integration business, rather than a competing open-source framework.
+
+Kushel Digi — commercial agency
+Again:
+
+services company.
+
+They build headless systems across WooCommerce, Odoo and other platforms.
+
+Interesting competitor from a services-market perspective, but not really from the "someone can clone STOREFIRE from their GitHub repo" perspective.
+
+The landscape is actually much cleaner than I initially made it sound
+
+I'd revise my earlier competitor table like this:
+
+Open source product	Commercial software	Commercial services
+WooNuxt 🟢 — Possible ecosystem/services
+NuxtCommerce 🟢 — —
+Shopinvader 🟢 — 🟢
+WooHL ? ? ?
+Axis Web Art — — 🟢
+AddWeb — — 🟢
+Elanq — — 🟢
+Hornet Dynamics — — 🟢
+Kushel Digi — — 🟢
+
+And that's actually good news for STOREFIRE.
+
+Because your competition isn't a wall of SaaS companies charging merchants $X/month for essentially the same thing.
+
+There's another important thing I noticed
+
+WooNuxt is not even trying to hide what it is.
+
+Their README says:
+
+"Static e-commerce powered by WooCommerce & Nuxt"
+
+and the project is GPL-3.0.
+
+The feature set is also very storefront-oriented:
+
+products
+cart
+search
+shipping
+checkout
+filtering
+wishlist
+account
+coupons
+reviews
+categories
+PWA
+localisation
+
+Whereas your README reads more like:
+
+"Here's the fucking infrastructure required to repeatedly deploy this architecture in the real world."
+
+That's the difference I'd preserve.
+
+And here's the bit I'd investigate next
+
+Don't spend too much time comparing the visual storefronts.
+
+I'd dig into how each project makes money and what they actually sell around the open-source core.
+
+Particularly:
+
+WooNuxt
+Who maintains it?
+Does the maintainer sell development?
+Is there paid support?
+Are there paid modules?
+Is the GPL code usable commercially?
+What's the actual business behind it?
+Shopinvader
+This is the most interesting model for STOREFIRE.
+Open-source core + Odoo integrators.
+Find out exactly what the commercial companies sell.
+That's potentially a business model analogue.
+WooHL
+Determine whether it's actually open source.
+Find pricing.
+Find ownership.
+Find GitHub.
+Find what the customer actually buys.
+NuxtCommerce
+Who owns it?
+License?
+Is it simply an OSS project?
+Any commercial offering?
+The agencies
+Less technically interesting.
+More useful for figuring out what customers currently pay humans to build that STOREFIRE could standardise.
+
+And that last question is probably the money question.
+
+Because if an agency is charging a client £5k/£10k/£20k to repeatedly build:
+
+WooCommerce
++
+API integration
++
+Nuxt
++
+Cloudflare
++
+cache
++
+cart
++
+checkout
++
+security
++
+testing
++
+deployment
+
+then STOREFIRE doesn't necessarily need to beat WooNuxt.
+
+It needs to make that whole agency job substantially faster and more repeatable.
+
+That's a much more interesting proposition.
+
+Yes — and after checking the actual sites/repos, WooNuxt is much less mysterious than it initially looked. It is not a scam or some opaque SaaS.
+
+1. WooNuxt — essentially open source
+The GitHub repo is public, has about 966 stars / 304 forks, and is explicitly licensed GPL-3.0.
+
+WooNuxt GitHub repository
+
+The website is basically the showcase/documentation/entry point for that open-source project. The actual stack is:
+
+WooCommerce
+    ↓
+WPGraphQL
+    ↓
+WooGraphQL
+    ↓
+WooNuxt
+    ↓
+Nuxt/Vue
+The required WordPress plugins are also open-source/public; the WooNuxt Settings plugin is on GitHub too.
+
+And the website itself tells you to install the plugin, configure the frontend and deploy it wherever you like.
+
+So: free or freemium?
+Free/open-source.
+
+I don't see evidence that WooNuxt is a "free demo with a paid SaaS hiding behind it." The core project is genuinely open source under GPL-3.0.
+
+There may obviously be commercial work/services around the ecosystem, but the software itself is open source.
+
+And this makes your observation important:
+
+WooNuxt is basically what you started with.
+
+Except STOREFIRE has evolved beyond it.
+
+2. The really interesting comparison
+WooNuxt:
+
+             WooCommerce
+                  │
+            WPGraphQL
+                  │
+              WooNuxt
+                  │
+             Nuxt/Vue
+STOREFIRE:
+
+              Commerce
+             /         \
+     WooCommerce       Odoo
+           \             /
+            CommerceAdapter
+                   │
+               Nitro API
+                   │
+                Nuxt 4
+Then STOREFIRE adds:
+
+        ┌─────────────────────┐
+        │      STOREFIRE      │
+        ├─────────────────────┤
+        │ Commerce adapters   │
+        │ Nitro API           │
+        │ caching             │
+        │ cart                │
+        │ checkout            │
+        │ security            │
+        │ Playwright          │
+        │ k6                  │
+        │ logging             │
+        │ observability       │
+        │ Cloudflare          │
+        │ deployment          │
+        │ backup/runbooks     │
+        └─────────────────────┘
+That's a materially different proposition.
+
+3. Shopinvader — also genuinely open source, but commercial ecosystem around it
+This one is fascinating.
+
+Their own website explicitly calls the product:
+
+"Odoo open source Headless eCommerce"
+
+and says both the Odoo FastAPI backend and Nuxt/Vue frontend are open source.
+
+So again, not a conventional SaaS where you pay to use their frontend.
+
+But there is a commercial ecosystem around it.
+
+They list several companies as main contributors:
+
+Acsone
+Akretion
+Camptocamp
+ForgeFlow
+and invite businesses to get in touch for a complete backend/frontend demo.
+
+So I'd classify Shopinvader as:
+
+Open-source technology + commercial professional services/ecosystem.
+
+That's a very important distinction.
+
+It's basically the Odoo equivalent of the direction you're heading in.
+
+4. Axis Web Art — completely different beast
+Axis isn't selling a software product.
+
+It's a commercial white-label development agency.
+
+Their pitch is basically:
+
+You sell the project. We build it. Your client doesn't know we exist.
+
+They say they have 40+ agency partners and 50+ in-house developers/designers.
+
+Their WooCommerce service explicitly includes headless builds using:
+
+Next.js
+Nuxt.js
+WooCommerce REST API
+WPGraphQL
+WooGraphQL
+
+Commercial model
+100% services.
+
+Not open-source software competition.
+
+They're selling developer capacity.
+
+In fact, I'd put Axis in a completely different box:
+
+STOREFIRE                  AXIS
+
+software foundation       people
+        ↓                   ↓
+repeatable builds         custom builds
+        ↓                   ↓
+many clients              client projects
+They could potentially be a customer of something like STOREFIRE, rather than necessarily a competitor.
+
+5. AddWeb — also services
+AddWeb is another commercial development company.
+
+WooCommerce lists them as having 13+ years of WooCommerce experience, 1,100+ clients and 160+ in-house developers. Their services include custom WooCommerce, integrations, maintenance and headless builds.
+
+They explicitly say they'll do headless WooCommerce when it actually makes sense rather than automatically pushing it.
+
+Their commercial model is:
+
+pay AddWeb to build/maintain the thing.
+
+There isn't a competing STOREFIRE-style open-source product sitting underneath their website that I can see.
+
+6. WooHL — this one needs more investigation
+WooHL is interesting because it looks more like a productised solution than Axis/AddWeb.
+
+But I wouldn't currently put it in the same confidence category as WooNuxt or Shopinvader without digging into its repository/licensing/business model further.
+
+This is one I'd put on the:
+
+"Investigate properly before drawing conclusions"
+
+list.
+
+7. Elanq — commercial Odoo specialist
+Elanq is essentially an Odoo commerce implementation company.
+
+So:
+
+commercial services, not an obvious direct STOREFIRE software competitor.
+
+Its relevance is architectural: they're solving the same broad problem of separating Odoo from the customer-facing commerce frontend.
+
+8. Hornet Dynamics — commercial agency
+Same story.
+
+They're selling headless commerce development across multiple commerce platforms.
+
+That's:
+
+agency/integration business, rather than a competing open-source framework.
+
+9. Kushel Digi — commercial agency
+Again:
+
+services company.
+
+They build headless systems across WooCommerce, Odoo and other platforms.
+
+Interesting competitor from a services-market perspective, but not really from the "someone can clone STOREFIRE from their GitHub repo" perspective.
+
+The landscape is actually much cleaner than I initially made it sound
+I'd revise my earlier competitor table like this:
+
+  | Open source product | Commercial software | Commercial services -- | -- | -- | -- WooNuxt | 🟢 | — | Possible ecosystem/services NuxtCommerce | 🟢 | — | — Shopinvader | 🟢 | — | 🟢 WooHL | ? | ? | ? Axis Web Art | — | — | 🟢 AddWeb | — | — | 🟢 Elanq | — | — | 🟢 Hornet Dynamics | — | — | 🟢 Kushel Digi | — | — | 🟢
+And that's actually good news for STOREFIRE.
+
+Because your competition isn't a wall of SaaS companies charging merchants $X/month for essentially the same thing.
+
+There's another important thing I noticed
+WooNuxt is not even trying to hide what it is.
+
+Their README says:
+
+"Static e-commerce powered by WooCommerce & Nuxt"
+
+and the project is GPL-3.0.
+
+The feature set is also very storefront-oriented:
+
+products
+cart
+search
+shipping
+checkout
+filtering
+wishlist
+account
+coupons
+reviews
+categories
+PWA
+localisation
+
+Whereas your README reads more like:
+
+"Here's the fucking infrastructure required to repeatedly deploy this architecture in the real world."
+
+That's the difference I'd preserve.
+
+And here's the bit I'd investigate next
+Don't spend too much time comparing the visual storefronts.
+
+I'd dig into how each project makes money and what they actually sell around the open-source core.
+
+Particularly:
+
+WooNuxt
+Who maintains it?
+Does the maintainer sell development?
+Is there paid support?
+Are there paid modules?
+Is the GPL code usable commercially?
+What's the actual business behind it?
+Shopinvader
+This is the most interesting model for STOREFIRE.
+Open-source core + Odoo integrators.
+Find out exactly what the commercial companies sell.
+That's potentially a business model analogue.
+WooHL
+Determine whether it's actually open source.
+Find pricing.
+Find ownership.
+Find GitHub.
+Find what the customer actually buys.
+NuxtCommerce
+Who owns it?
+License?
+Is it simply an OSS project?
+Any commercial offering?
+The agencies
+Less technically interesting.
+More useful for figuring out what customers currently pay humans to build that STOREFIRE could standardise.
+And that last question is probably the money question.
+
+Because if an agency is charging a client £5k/£10k/£20k to repeatedly build:
+
+WooCommerce
+     +
+API integration
+     +
+Nuxt
+     +
+Cloudflare
+     +
+cache
+     +
+cart
+     +
+checkout
+     +
+security
+     +
+testing
+     +
+deployment
+then STOREFIRE doesn't necessarily need to beat WooNuxt.
+
+It needs to make that whole agency job substantially faster and more repeatable.
+
+That's a much more interesting proposition.
+
+Yes — and after checking the actual sites/repos, WooNuxt is much less mysterious than it initially looked. It is not a scam or some opaque SaaS.
+WooNuxt — essentially open source
+The GitHub repo is public, has about 966 stars / 304 forks, and is explicitly licensed GPL-3.0.
+
+WooNuxt GitHub repository
+
+The website is basically the showcase/documentation/entry point for that open-source project. The actual stack is:
+
+WooCommerce
+↓
+WPGraphQL
+↓
+WooGraphQL
+↓
+WooNuxt
+↓
+Nuxt/Vue
+
+The required WordPress plugins are also open-source/public; the WooNuxt Settings plugin is on GitHub too.
+
+And the website itself tells you to install the plugin, configure the frontend and deploy it wherever you like.
+
+So: free or freemium?
+
+Free/open-source.
+
+I don't see evidence that WooNuxt is a "free demo with a paid SaaS hiding behind it." The core project is genuinely open source under GPL-3.0.
+
+There may obviously be commercial work/services around the ecosystem, but the software itself is open source.
+
+And this makes your observation important:
+
+WooNuxt is basically what you started with.
+
+Except STOREFIRE has evolved beyond it.
+
+The really interesting comparison
+WooNuxt:
+
+         WooCommerce
+              │
+        WPGraphQL
+              │
+          WooNuxt
+              │
+         Nuxt/Vue
+STOREFIRE:
+
+          Commerce
+         /         \
+ WooCommerce       Odoo
+       \             /
+        CommerceAdapter
+               │
+           Nitro API
+               │
+            Nuxt 4
+Then STOREFIRE adds:
+
+    ┌─────────────────────┐
+    │      STOREFIRE      │
+    ├─────────────────────┤
+    │ Commerce adapters   │
+    │ Nitro API           │
+    │ caching             │
+    │ cart                │
+    │ checkout            │
+    │ security            │
+    │ Playwright          │
+    │ k6                  │
+    │ logging             │
+    │ observability       │
+    │ Cloudflare          │
+    │ deployment          │
+    │ backup/runbooks     │
+    └─────────────────────┘
+That's a materially different proposition.
+
+Shopinvader — also genuinely open source, but commercial ecosystem around it
+This one is fascinating.
+
+Their own website explicitly calls the product:
+
+"Odoo open source Headless eCommerce"
+
+and says both the Odoo FastAPI backend and Nuxt/Vue frontend are open source.
+
+So again, not a conventional SaaS where you pay to use their frontend.
+
+But there is a commercial ecosystem around it.
+
+They list several companies as main contributors:
+
+Acsone
+Akretion
+Camptocamp
+ForgeFlow
+
+and invite businesses to get in touch for a complete backend/frontend demo.
+
+So I'd classify Shopinvader as:
+
+Open-source technology + commercial professional services/ecosystem.
+
+That's a very important distinction.
+
+It's basically the Odoo equivalent of the direction you're heading in.
+
+Axis Web Art — completely different beast
+Axis isn't selling a software product.
+
+It's a commercial white-label development agency.
+
+Their pitch is basically:
+
+You sell the project. We build it. Your client doesn't know we exist.
+
+They say they have 40+ agency partners and 50+ in-house developers/designers.
+
+Their WooCommerce service explicitly includes headless builds using:
+
+Next.js
+Nuxt.js
+WooCommerce REST API
+WPGraphQL
+WooGraphQL
+
+Commercial model
+
+100% services.
+
+Not open-source software competition.
+
+They're selling developer capacity.
+
+In fact, I'd put Axis in a completely different box:
+
+STOREFIRE AXIS
+
+software foundation people
+↓ ↓
+repeatable builds custom builds
+↓ ↓
+many clients client projects
+
+They could potentially be a customer of something like STOREFIRE, rather than necessarily a competitor.
+
+AddWeb — also services
+AddWeb is another commercial development company.
+
+WooCommerce lists them as having 13+ years of WooCommerce experience, 1,100+ clients and 160+ in-house developers. Their services include custom WooCommerce, integrations, maintenance and headless builds.
+
+They explicitly say they'll do headless WooCommerce when it actually makes sense rather than automatically pushing it.
+
+Their commercial model is:
+
+pay AddWeb to build/maintain the thing.
+
+There isn't a competing STOREFIRE-style open-source product sitting underneath their website that I can see.
+
+WooHL — this one needs more investigation
+WooHL is interesting because it looks more like a productised solution than Axis/AddWeb.
+
+But I wouldn't currently put it in the same confidence category as WooNuxt or Shopinvader without digging into its repository/licensing/business model further.
+
+This is one I'd put on the:
+
+"Investigate properly before drawing conclusions"
+
+list.
+
+Elanq — commercial Odoo specialist
+Elanq is essentially an Odoo commerce implementation company.
+
+So:
+
+commercial services, not an obvious direct STOREFIRE software competitor.
+
+Its relevance is architectural: they're solving the same broad problem of separating Odoo from the customer-facing commerce frontend.
+
+Hornet Dynamics — commercial agency
+Same story.
+
+They're selling headless commerce development across multiple commerce platforms.
+
+That's:
+
+agency/integration business, rather than a competing open-source framework.
+
+Kushel Digi — commercial agency
+Again:
+
+services company.
+
+They build headless systems across WooCommerce, Odoo and other platforms.
+
+Interesting competitor from a services-market perspective, but not really from the "someone can clone STOREFIRE from their GitHub repo" perspective.
+
+The landscape is actually much cleaner than I initially made it sound
+
+I'd revise my earlier competitor table like this:
+
+Open source product	Commercial software	Commercial services
+WooNuxt 🟢 — Possible ecosystem/services
+NuxtCommerce 🟢 — —
+Shopinvader 🟢 — 🟢
+WooHL ? ? ?
+Axis Web Art — — 🟢
+AddWeb — — 🟢
+Elanq — — 🟢
+Hornet Dynamics — — 🟢
+Kushel Digi — — 🟢
+
+And that's actually good news for STOREFIRE.
+
+Because your competition isn't a wall of SaaS companies charging merchants $X/month for essentially the same thing.
+
+There's another important thing I noticed
+
+WooNuxt is not even trying to hide what it is.
+
+Their README says:
+
+"Static e-commerce powered by WooCommerce & Nuxt"
+
+and the project is GPL-3.0.
+
+The feature set is also very storefront-oriented:
+
+products
+cart
+search
+shipping
+checkout
+filtering
+wishlist
+account
+coupons
+reviews
+categories
+PWA
+localisation
+
+Whereas your README reads more like:
+
+"Here's the fucking infrastructure required to repeatedly deploy this architecture in the real world."
+
+That's the difference I'd preserve.
+
+And here's the bit I'd investigate next
+
+Don't spend too much time comparing the visual storefronts.
+
+I'd dig into how each project makes money and what they actually sell around the open-source core.
+
+Particularly:
+
+WooNuxt
+Who maintains it?
+Does the maintainer sell development?
+Is there paid support?
+Are there paid modules?
+Is the GPL code usable commercially?
+What's the actual business behind it?
+Shopinvader
+This is the most interesting model for STOREFIRE.
+Open-source core + Odoo integrators.
+Find out exactly what the commercial companies sell.
+That's potentially a business model analogue.
+WooHL
+Determine whether it's actually open source.
+Find pricing.
+Find ownership.
+Find GitHub.
+Find what the customer actually buys.
+NuxtCommerce
+Who owns it?
+License?
+Is it simply an OSS project?
+Any commercial offering?
+The agencies
+Less technically interesting.
+More useful for figuring out what customers currently pay humans to build that STOREFIRE could standardise.
+
+And that last question is probably the money question.
+
+Because if an agency is charging a client £5k/£10k/£20k to repeatedly build:
+
+WooCommerce
++
+API integration
++
+Nuxt
++
+Cloudflare
++
+cache
++
+cart
++
+checkout
++
+security
++
+testing
++
+deployment
+
+then STOREFIRE doesn't necessarily need to beat WooNuxt.
+
+It needs to make that whole agency job substantially faster and more repeatable.
+
+That's a much more interesting proposition.

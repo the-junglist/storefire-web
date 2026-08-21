@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 font-sans dark:bg-sf-black dark:text-gray-300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    @apply bg-sf-neon/30 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-sf-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-sf-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-sf-muted;
+  }
+}
+
+@layer components {
+  /* Glow text — fire orange */
+  .glow-fire {
+    text-shadow: 0 0 10px #f97316, 0 0 20px #f97316, 0 0 40px #ea580c;
+  }
+
+  /* Glow text — cyan */
+  .glow-cyan {
+    text-shadow: 0 0 10px #22d3ee, 0 0 20px #22d3ee, 0 0 40px #0891b2;
+  }
+
+  /* Box glow */
+  .glow-border-fire {
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.15), inset 0 0 15px rgba(249, 115, 22, 0.05);
+  }
+
+  .glow-border-cyan {
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.15), inset 0 0 15px rgba(34, 211, 238, 0.05);
+  }
+
+  /* Card hover — fire glow */
+  .sf-card-hover {
+    @apply transition-all duration-300;
+  }
+  .sf-card-hover:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.15), inset 0 0 15px rgba(249, 115, 22, 0.05);
+    border-color: rgba(249, 115, 22, 0.3);
+  }
+
+  /* Section divider */
+  .sf-section-divider {
+    @apply w-full h-px bg-gradient-to-r from-transparent via-sf-border to-transparent;
+  }
+}
+
+/* Page transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 150ms ease-out;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}

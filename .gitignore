@@ -1,0 +1,27 @@
+# Nuxt
+.nuxt
+.output
+.nitro
+.cache
+dist
+
+# Node
+node_modules
+*.log
+.npm
+.pnpm-store
+
+# Env
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode
+.idea
+*.swp
+.DS_Store
+
+# Wrangler / Cloudflare
+.wrangler
+.dev.vars
