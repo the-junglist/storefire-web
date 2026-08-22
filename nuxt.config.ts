@@ -16,6 +16,12 @@ export default defineNuxtConfig({
         { property: 'og:site_name', content: 'Storefire' },
         { name: 'theme-color', content: '#000000' },
       ],
+      script: [
+        { src: 'https://www.googletagmanager.com/gtag/js?id=G-F627LE1HLQ', async: true },
+        {
+          innerHTML: "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-F627LE1HLQ');",
+        },
+      ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/storefire_fav_logo.png' },
         { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/android-chrome-192x192.png' },
