@@ -3,8 +3,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
-        <NuxtLink to="/" class="flex items-center gap-2 group">
-          <img src="/storefire_logo_1.png" alt="Storefire" class="h-10 w-auto" />
+        <NuxtLink to="/" class="flex items-center gap-2 group" aria-label="Storefire home">
+          <img src="/storefire_fav_logo.png" alt="Storefire" class="h-9 w-auto md:hidden" />
+          <img src="/storefire_logo_1.png" alt="" class="h-10 w-auto hidden md:block" />
         </NuxtLink>
 
         <!-- Desktop Nav -->
@@ -49,15 +50,9 @@
         <div class="hidden md:flex items-center gap-3">
           <NuxtLink
             to="https://storefire.online"
-            class="px-4 py-2 text-sm font-mono text-sf-neon border border-sf-neon/30 rounded-lg hover:bg-sf-neon/10 transition-all"
-          >
-            View Store
-          </NuxtLink>
-          <NuxtLink
-            to="/contact"
             class="px-4 py-2 text-sm font-mono bg-sf-neon text-white rounded-lg hover:bg-sf-fire-400 transition-all font-semibold"
           >
-            Get Started
+            See StoreFire
           </NuxtLink>
           <button
             @click="toggleTheme"
@@ -107,20 +102,13 @@
             </NuxtLink>
           </template>
         </div>
-        <div class="mt-4 px-3 flex gap-2">
+        <div class="mt-4 px-3 flex">
           <NuxtLink
             to="https://storefire.online"
-            class="flex-1 text-center px-4 py-2 text-sm font-mono text-sf-neon border border-sf-neon/30 rounded-lg"
-            @click="mobileOpen = false"
-          >
-            View Store
-          </NuxtLink>
-          <NuxtLink
-            to="/contact"
             class="flex-1 text-center px-4 py-2 text-sm font-mono bg-sf-neon text-white rounded-lg font-semibold"
             @click="mobileOpen = false"
           >
-            Get Started
+            See StoreFire
           </NuxtLink>
         </div>
       </div>
@@ -144,17 +132,9 @@ const mobileOpen = ref(false)
 const isDark = ref(false)
 
 const navItems = [
-  {
-    label: 'Platform',
-    children: [
-      { label: 'What is Storefire', to: '/#about' },
-      { label: 'Your shop, your choice', to: '/#commerce' },
-      { label: 'What you get', to: '/#features' },
-    ],
-  },
-  { label: 'Compare', to: '/comparison' },
-  { label: 'Pricing', to: '/pricing' },
-  { label: 'About', to: '/about' },
+  { label: 'How it works', to: '/#how' },
+  { label: 'For developers', to: '/#developers' },
+  { label: 'FAQ', to: '/#faq' },
   { label: 'Contact', to: '/contact' },
 ]
 

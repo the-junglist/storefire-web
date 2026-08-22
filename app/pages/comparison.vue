@@ -177,7 +177,7 @@
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <NuxtLink
-          to="/#features"
+          to="/#how"
           class="px-8 py-4 bg-sf-neon text-white font-mono font-bold rounded-lg hover:bg-sf-fire-400 transition-all text-lg"
         >
           See how it works →
