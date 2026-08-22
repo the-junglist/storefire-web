@@ -10,40 +10,14 @@
 
         <!-- Desktop Nav -->
         <div class="hidden md:flex items-center gap-1">
-          <div v-for="item in navItems" :key="item.label" class="relative group">
-            <NuxtLink
-              v-if="!item.children"
-              :to="item.to"
-              class="px-3 py-2 text-sm text-gray-300 hover:text-sf-neon transition-colors font-mono"
-            >
-              {{ item.label }}
-            </NuxtLink>
-            <button
-              v-else
-              class="px-3 py-2 text-sm text-gray-300 hover:text-sf-neon transition-colors font-mono flex items-center gap-1"
-            >
-              {{ item.label }}
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <!-- Dropdown -->
-            <div
-              v-if="item.children"
-              class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-            >
-              <div class="bg-zinc-900 border border-zinc-700 rounded-lg py-2 min-w-[220px] shadow-xl">
-                <NuxtLink
-                  v-for="child in item.children"
-                  :key="child.to"
-                  :to="child.to"
-                  class="block px-4 py-2 text-sm text-gray-300 hover:text-sf-neon hover:bg-zinc-800 transition-colors"
-                >
-                  {{ child.label }}
-                </NuxtLink>
-              </div>
-            </div>
-          </div>
+          <NuxtLink
+            v-for="item in navItems"
+            :key="item.label"
+            :to="item.to"
+            class="px-3 py-2 text-sm text-gray-300 hover:text-sf-neon transition-colors font-mono"
+          >
+            {{ item.label }}
+          </NuxtLink>
         </div>
 
 <!-- CTA & Theme toggle -->
@@ -80,28 +54,15 @@
 
       <!-- Mobile menu -->
       <div v-if="mobileOpen" class="md:hidden pb-4 border-t border-zinc-700 bg-zinc-950 mt-2 pt-4">
-        <div v-for="item in navItems" :key="item.label" class="mb-2">
-          <NuxtLink
-            v-if="!item.children"
-            :to="item.to"
-            class="block px-3 py-2 text-sm text-gray-300 hover:text-sf-neon font-mono"
-            @click="mobileOpen = false"
-          >
-            {{ item.label }}
-          </NuxtLink>
-          <template v-else>
-            <div class="px-3 py-2 text-xs text-gray-500 font-mono uppercase tracking-wider">{{ item.label }}</div>
-            <NuxtLink
-              v-for="child in item.children"
-              :key="child.to"
-              :to="child.to"
-              class="block px-6 py-2 text-sm text-gray-300 hover:text-sf-neon font-mono"
-              @click="mobileOpen = false"
-            >
-              {{ child.label }}
-            </NuxtLink>
-          </template>
-        </div>
+        <NuxtLink
+          v-for="item in navItems"
+          :key="item.label"
+          :to="item.to"
+          class="block px-3 py-2 text-sm text-gray-300 hover:text-sf-neon font-mono mb-2"
+          @click="mobileOpen = false"
+        >
+          {{ item.label }}
+        </NuxtLink>
         <div class="mt-4 px-3 flex">
           <NuxtLink
             to="https://shop.storefire.online"

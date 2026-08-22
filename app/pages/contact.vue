@@ -9,21 +9,8 @@
         Have a shop on WooCommerce that feels too slow or too tangled? Want to see Storefire on your products? Let's talk.
       </p>
 
-      <!-- Success message -->
-      <div v-if="submitted" class="mt-12 bg-white dark:bg-sf-surface border border-sf-neon/30 rounded-xl p-8 text-center glow-border-fire">
-        <div class="font-mono text-4xl mb-4">✓</div>
-        <h2 class="font-mono text-2xl font-bold text-zinc-900 dark:text-white mb-2">Message Sent</h2>
-        <p class="text-gray-500 dark:text-gray-400">We'll get back to you within 24 hours.</p>
-        <button
-          class="mt-6 px-6 py-3 border border-sf-neon/30 text-sf-neon font-mono rounded-lg hover:bg-sf-neon/10 transition-all"
-          @click="submitted = false"
-        >
-          Send Another →
-        </button>
-      </div>
-
       <!-- Contact form -->
-      <form v-else class="mt-12 space-y-6" @submit.prevent="handleSubmit">
+      <form class="mt-12 space-y-6" @submit.prevent="handleSubmit">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
             <label for="name" class="block font-mono text-sm text-sf-muted mb-2">Name</label>
@@ -80,11 +67,13 @@
         <div>
           <button
             type="submit"
-            :disabled="sending"
-            class="w-full px-8 py-4 bg-sf-neon text-white font-mono font-bold rounded-lg hover:bg-sf-fire-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            class="w-full px-8 py-4 bg-sf-neon text-white font-mono font-bold rounded-lg hover:bg-sf-fire-400 transition-all"
           >
-            {{ sending ? 'Sending...' : 'Send Message →' }}
+            Send Message →
           </button>
+          <p class="mt-3 text-center text-xs text-gray-400 dark:text-gray-500">
+            This opens your email app with the message ready to send.
+          </p>
         </div>
       </form>
     </section>
@@ -97,7 +86,7 @@ useSeoMeta({
   ogTitle: 'Contact Storefire',
   description: 'Have a shop on WooCommerce that feels too slow or too tangled? Want to see Storefire on your products? Let\'s talk — we\'d love to hear about your shop.',
   ogDescription: 'Contact Storefire — have a shop that feels too slow or tangled? Let\'s talk.',
-  ogImage: '/storefire_fav_logo.png',
+  ogImage: '/storefire_og.png',
 })
 
 useHead({
@@ -121,17 +110,11 @@ const form = reactive({
   message: '',
 })
 
-const sending = ref(false)
-const submitted = ref(false)
-
-async function handleSubmit() {
-  sending.value = true
-  await new Promise(resolve => setTimeout(resolve, 1000))
-  submitted.value = true
-  sending.value = false
-  form.name = ''
-  form.email = ''
-  form.business = ''
-  form.message = ''
+function handleSubmit() {
+  const subject = encodeURIComponent(`Storefire enquiry — ${form.name || form.email}`)
+  const body = encodeURIComponent(
+    `Name: ${form.name}\nEmail: ${form.email}\nBusiness: ${form.business}\n\n${form.message}`
+  )
+  window.location.href = `mailto:hello@storefire.online?subject=${subject}&body=${body}`
 }
 </script>

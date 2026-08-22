@@ -73,7 +73,7 @@ useSeoMeta({
   ogTitle: 'About — Storefire',
   description: 'Storefire came from running four real shops that hit the same limits with WordPress. A fast, open-source shopfront that works with your WooCommerce store today and can grow with you tomorrow.',
   ogDescription: 'About Storefire — built from real shops, open source and ready to grow with you.',
-  ogImage: '/storefire_fav_logo.png',
+  ogImage: '/storefire_og.png',
 })
 
 useHead({

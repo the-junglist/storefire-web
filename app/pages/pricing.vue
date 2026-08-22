@@ -163,7 +163,7 @@ useSeoMeta({
   ogTitle: 'Pricing — Storefire',
   description: 'Storefire is free shop software. Host it yourself for free, or let us host it for you — no monthly fee, just a small share of each sale, agreed up front. You only pay when you sell.',
   ogDescription: 'Free shop software — host yourself for free, or let us host it and pay only when you sell.',
-  ogImage: '/storefire_fav_logo.png',
+  ogImage: '/storefire_og.png',
 })
 
 useHead({

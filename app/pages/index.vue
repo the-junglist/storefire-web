@@ -376,7 +376,7 @@ useSeoMeta({
   ogTitle: 'Storefire — Keep Your WooCommerce Shop. Lose the Weight.',
   description: 'Your products, orders and WooCommerce setup can stay where they are. StoreFire gives customers a lighter storefront to shop through.',
   ogDescription: 'Keep your WooCommerce shop. Lose the weight.',
-  ogImage: '/storefire_fav_logo.png',
+  ogImage: '/storefire_og.png',
   twitterCard: 'summary_large_image',
 })
 </script>

@@ -199,7 +199,7 @@ useSeoMeta({
   ogTitle: 'Storefire — Keep Your Shop. Lose the Headaches.',
   description: 'Your WooCommerce shop is slow and messy with plugins. Storefire gives you a faster shopfront today using what you already have — and a simple switch to Odoo later if you want. No big rebuild.',
   ogDescription: 'Keep your products and orders. Get a faster shop. Stay free to switch later — no big rebuild, no lock-in.',
-  ogImage: '/storefire_fav_logo.png',
+  ogImage: '/storefire_og.png',
 })
 
 const painPoints = [
