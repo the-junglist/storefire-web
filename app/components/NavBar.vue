@@ -49,7 +49,7 @@
 <!-- CTA & Theme toggle -->
         <div class="hidden md:flex items-center gap-3">
           <NuxtLink
-            to="https://storefire.online"
+            to="https://shop.storefire.online"
             class="px-4 py-2 text-sm font-mono bg-sf-neon text-white rounded-lg hover:bg-sf-fire-400 transition-all font-semibold"
           >
             See StoreFire
@@ -104,7 +104,7 @@
         </div>
         <div class="mt-4 px-3 flex">
           <NuxtLink
-            to="https://storefire.online"
+            to="https://shop.storefire.online"
             class="flex-1 text-center px-4 py-2 text-sm font-mono bg-sf-neon text-white rounded-lg font-semibold"
             @click="mobileOpen = false"
           >

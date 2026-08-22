@@ -8,11 +8,12 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'Storefire — Headless E-Commerce Platform',
+      title: 'Storefire — Keep Your WooCommerce Shop. Lose the Weight.',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Production-quality Nuxt 4 headless e-commerce template. WooCommerce + Odoo backends. Cloudflare Pages deploy.' },
+        { name: 'description', content: 'Your products, orders and WooCommerce setup can stay where they are. StoreFire gives customers a lighter storefront to shop through.' },
+        { property: 'og:site_name', content: 'Storefire' },
         { name: 'theme-color', content: '#000000' },
       ],
       link: [
@@ -57,6 +58,21 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/sitemap',
   ],
+
+  site: {
+    url: 'https://storefire.online',
+    name: 'Storefire',
+  },
+
+  sitemap: {
+    urls: [
+      { loc: '/', changefreq: 'weekly', priority: 1 },
+      { loc: '/about', changefreq: 'monthly', priority: 0.7 },
+      { loc: '/pricing', changefreq: 'monthly', priority: 0.8 },
+      { loc: '/comparison', changefreq: 'monthly', priority: 0.7 },
+      { loc: '/contact', changefreq: 'yearly', priority: 0.5 },
+    ],
+  },
 
   nitro: {
     preset: 'cloudflare-pages',

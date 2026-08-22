@@ -1,0 +1,90 @@
+# Storefire — full content for LLMs and agents
+
+> Last updated: 2026-08-23. Source of truth: https://storefire.online (marketing) and https://github.com/the-junglist/storefire (source code). Live demo: https://shop.storefire.online
+
+## One-line summary
+
+StoreFire gives a WooCommerce shop a lighter, faster storefront without throwing away the WooCommerce shop behind it.
+
+## The problem
+
+WooCommerce stores collect themes, plugins, page builders, scripts, styles and other stuff over time. It all ends up travelling to the customer's browser on every visit. The shop isn't broken — it's carrying too much baggage.
+
+## The explanation
+
+StoreFire doesn't replace the WooCommerce shop. WooCommerce keeps handling the shop (products, orders, customers, payments, inventory). StoreFire handles the storefront customers actually see:
+
+```
+YOUR WOOCOMMERCE SHOP
+Products · Orders · Customers · Payments · Inventory
+        │
+        ▼
+STOREFIRE — fast storefront
+        │
+        ▼
+CUSTOMER
+```
+
+## Three core benefits
+
+1. **Less baggage** — keep the WooCommerce backend without making the browser carry the whole thing.
+2. **Faster storefront** — a cleaner frontend with less unnecessary work happening in the browser.
+3. **Keep what you've built** — products, orders and the WooCommerce setup don't need to be thrown away just because the storefront needs improving.
+
+## You don't need to rebuild your shop
+
+If WooCommerce already does the job, why replace it? StoreFire separates the storefront from the baggage instead of starting the business again from scratch.
+
+Old way:
+WooCommerce + Theme + Plugins + Page builder + Scripts + Everything else → Customer
+
+StoreFire way:
+WooCommerce → StoreFire → Customer
+
+## Under the bonnet (verified technical facts)
+
+StoreFire uses WooCommerce for the commerce side and a separate frontend for the customer-facing side. Products, prices, carts and orders still connect to the WooCommerce system; the storefront doesn't have to be WordPress rendering every part of the shopping experience.
+
+| Layer | Technology |
+|---|---|
+| Frontend | Nuxt 4 + Vue 3 |
+| Commerce | WooCommerce REST API |
+| Cart & checkout | CoCart — session-based, no login needed |
+| Caching | Nitro cache — Cloudflare KV in production |
+| Images | Nuxt Image — avif/webp, responsive |
+| Hosting | Cloudflare Pages |
+
+The commerce backend is pluggable: Odoo is supported alongside WooCommerce via a single configuration switch. Source code: https://github.com/the-junglist/storefire
+
+## Pricing
+
+- **Self-hosted**: £0. Open source software — deploy it yourself.
+- **Managed hosting**: no monthly fee and no fixed subscription. A small share of each sale, agreed up front. No sale, no fee.
+
+No invented performance numbers appear anywhere in Storefire marketing: specific speed percentages, conversion claims or SEO guarantees are deliberately not made.
+
+## FAQ
+
+### What is StoreFire?
+A lighter storefront that sits in front of your existing WooCommerce shop. Customers get a faster site to browse; WooCommerce keeps running the shop behind it.
+
+### Does StoreFire replace WooCommerce?
+No. WooCommerce keeps handling products, orders, customers and payments. Only the part shoppers see changes.
+
+### Do I need to rebuild my shop?
+No. Your WooCommerce setup stays exactly as it is. StoreFire connects to it — you don't start from scratch.
+
+### What happens to my products and orders?
+Nothing. They stay in WooCommerce, right where they are.
+
+### Is StoreFire for developers?
+You can run it yourself if you're comfortable deploying a web app — it's open source. Or talk to the team about running it for you.
+
+### Can I use it with my existing WooCommerce store?
+Yes — that's what it's built for. If a shop runs WooCommerce today, StoreFire can front it.
+
+## Contact
+
+- Contact page: https://storefire.online/contact
+- GitHub: https://github.com/the-junglist/storefire
+- Demo store: https://shop.storefire.online

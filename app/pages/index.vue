@@ -32,7 +32,7 @@
         <!-- CTAs -->
         <div class="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
           <NuxtLink
-            to="https://storefire.online"
+            to="https://shop.storefire.online"
             class="px-8 py-4 bg-sf-neon text-white font-mono font-bold rounded-lg hover:bg-sf-fire-400 transition-all text-lg"
           >
             See StoreFire in action
@@ -239,7 +239,7 @@
         </p>
         <div class="mt-6 md:mt-10 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
           <NuxtLink
-            to="https://storefire.online"
+            to="https://shop.storefire.online"
             class="px-8 py-4 bg-sf-neon text-white font-mono font-bold rounded-lg hover:bg-sf-fire-400 transition-all text-lg"
           >
             See StoreFire in action
