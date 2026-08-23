@@ -67,6 +67,8 @@
       </div>
     </section>
 
+    <SectionDivider />
+
     <!-- SIMPLE EXPLANATION -->
     <section class="py-12 md:py-24 bg-gray-50 dark:bg-zinc-900 relative" id="how" aria-labelledby="how-heading">
       <div class="absolute top-0 right-0 w-96 h-96 bg-sf-neon/5 rounded-full blur-[120px]" />
@@ -141,7 +143,7 @@
                 <div class="w-full max-w-[220px] px-3 py-1.5 border border-gray-200 dark:border-sf-border rounded font-mono text-xs text-gray-500 dark:text-gray-400">{{ item }}</div>
                 <span v-if="i < oldStack.length - 1" class="font-mono text-xs text-gray-400" aria-hidden="true">+</span>
               </template>
-              <Icon name="mdi:chevron-double-down" :size="20" class="text-gray-400 mt-1" aria-hidden="true" />
+              <Icon name="mdi:chevron-double-down" :size="20" class="text-sf-ice/70 group-open:text-sf-ice mt-1" aria-hidden="true" />
               <div class="px-6 py-1.5 border border-gray-300 dark:border-zinc-600 rounded-full font-mono text-xs text-gray-500 dark:text-gray-400">Customer</div>
             </div>
           </div>
@@ -161,6 +163,8 @@
       </div>
     </section>
 
+    <SectionDivider />
+
     <!-- UNDER THE BONNET -->
     <section class="py-12 md:py-24 bg-white dark:bg-sf-dark relative" id="developers" aria-labelledby="bonnet-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -177,7 +181,7 @@
 
         <div class="max-w-4xl mx-auto">
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 font-mono">
-            <div v-for="part in bonnetStack" :key="part.label" class="bg-white dark:bg-sf-surface border border-gray-200 dark:border-sf-border rounded-lg p-4">
+            <div v-for="part in bonnetStack" :key="part.label" class="bg-white dark:bg-sf-surface border border-gray-200 dark:border-sf-border rounded-lg p-4 transition-colors duration-300 hover:border-sf-ice/50">
               <div class="text-xs tracking-widest uppercase text-sf-neon">{{ part.label }}</div>
               <div class="mt-2 text-sm text-zinc-900 dark:text-white">{{ part.value }}</div>
             </div>
@@ -199,6 +203,8 @@
         <img src="/storefire_info_graphic_2.png" alt="Storefire infographic — what changes when the storefront is separated from WooCommerce" class="w-full h-auto rounded-xl" />
       </div>
     </section>
+
+    <SectionDivider />
 
     <!-- FAQ -->
     <section class="py-12 md:py-24 bg-gray-50 dark:bg-zinc-900 relative" id="faq" aria-labelledby="faq-heading">
