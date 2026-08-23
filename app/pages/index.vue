@@ -89,14 +89,14 @@
             <p class="mt-2 text-sm md:text-base text-zinc-900 dark:text-white">Products · Orders · Customers · Payments · Inventory</p>
           </div>
 
-          <div class="w-0.5 h-8 bg-gradient-to-b from-sf-neon to-sf-neonAlt my-1" aria-hidden="true" />
+          <div class="w-0.5 h-8 bg-gradient-to-b from-sf-ice/70 to-sf-ice/30 my-1" aria-hidden="true" />
 
           <div class="w-full bg-white dark:bg-sf-surface border border-sf-neon/50 rounded-xl p-6 text-center font-mono shadow-[0_0_24px_rgba(249,115,22,0.15)]">
             <div class="text-lg md:text-xl font-bold tracking-widest"><span class="text-zinc-900 dark:text-white">STORE</span><span class="text-sf-neon">FIRE</span></div>
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Fast storefront</p>
           </div>
 
-          <div class="w-0.5 h-8 bg-gradient-to-b from-sf-neonAlt to-transparent my-1" aria-hidden="true" />
+          <div class="w-0.5 h-8 bg-gradient-to-b from-sf-ice/40 to-transparent my-1" aria-hidden="true" />
 
           <div class="bg-white dark:bg-sf-surface border border-gray-200 dark:border-sf-border rounded-full px-8 py-3 font-mono text-sm text-zinc-900 dark:text-white">
             Customer

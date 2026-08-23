@@ -14,9 +14,9 @@
         <div>
           <h4 class="font-mono text-sm text-sf-neon mb-4">Product</h4>
           <ul class="space-y-2">
-            <li><NuxtLink to="/#how" class="text-sm text-gray-500 hover:text-sf-neon transition-colors">How it works</NuxtLink></li>
-            <li><NuxtLink to="/#developers" class="text-sm text-gray-500 hover:text-sf-neon transition-colors">For developers</NuxtLink></li>
-            <li><NuxtLink to="/#faq" class="text-sm text-gray-500 hover:text-sf-neon transition-colors">FAQ</NuxtLink></li>
+            <li><NuxtLink to="/#how" class="text-sm text-gray-500 hover:text-sf-ice transition-colors">How it works</NuxtLink></li>
+            <li><NuxtLink to="/#developers" class="text-sm text-gray-500 hover:text-sf-ice transition-colors">For developers</NuxtLink></li>
+            <li><NuxtLink to="/#faq" class="text-sm text-gray-500 hover:text-sf-ice transition-colors">FAQ</NuxtLink></li>
           </ul>
         </div>
 
@@ -24,9 +24,9 @@
         <div>
           <h4 class="font-mono text-sm text-sf-neon mb-4">Project</h4>
           <ul class="space-y-2">
-            <li><NuxtLink to="/contact" class="text-sm text-gray-500 hover:text-sf-neon transition-colors">Contact</NuxtLink></li>
-            <li><a href="https://github.com/the-junglist/storefire#readme" class="text-sm text-gray-500 hover:text-sf-neon transition-colors">Documentation</a></li>
-            <li><a href="https://github.com/the-junglist/storefire" class="text-sm text-gray-500 hover:text-sf-neon transition-colors">GitHub</a></li>
+            <li><NuxtLink to="/contact" class="text-sm text-gray-500 hover:text-sf-ice transition-colors">Contact</NuxtLink></li>
+            <li><a href="https://github.com/the-junglist/storefire#readme" class="text-sm text-gray-500 hover:text-sf-ice transition-colors">Documentation</a></li>
+            <li><a href="https://github.com/the-junglist/storefire" class="text-sm text-gray-500 hover:text-sf-ice transition-colors">GitHub</a></li>
           </ul>
         </div>
       </div>
@@ -37,7 +37,7 @@
           {{ new Date().getFullYear() }} Storefire
         </p>
         <p class="text-xs text-gray-400 font-mono">
-          Open source — <a href="https://github.com/the-junglist/storefire" class="hover:text-sf-neon transition-colors">the-junglist/storefire</a>
+          Open source — <a href="https://github.com/the-junglist/storefire" class="hover:text-sf-ice transition-colors">the-junglist/storefire</a>
         </p>
       </div>
     </div>

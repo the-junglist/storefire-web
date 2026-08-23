@@ -45,6 +45,7 @@ export default {
           },
           neon:    '#f97316',  // primary accent — orange fire
           neonAlt: '#ef4444',  // secondary accent — red
+          ice:     '#22d3ee',  // tertiary accent — cool data-flow blue (used sparingly)
         },
       },
       fontFamily: {
