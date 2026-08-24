@@ -95,6 +95,7 @@ const isDark = ref(false)
 const navItems = [
   { label: 'How it works', to: '/#how' },
   { label: 'For developers', to: '/#developers' },
+  { label: 'System check', to: '/system-check' },
   { label: 'FAQ', to: '/#faq' },
   { label: 'Contact', to: '/contact' },
 ]

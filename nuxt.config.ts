@@ -75,6 +75,7 @@ export default defineNuxtConfig({
       { loc: '/about', changefreq: 'monthly', priority: 0.7 },
       { loc: '/pricing', changefreq: 'monthly', priority: 0.8 },
       { loc: '/comparison', changefreq: 'monthly', priority: 0.7 },
+      { loc: '/system-check', changefreq: 'monthly', priority: 0.6 },
       { loc: '/contact', changefreq: 'yearly', priority: 0.5 },
     ],
   },
