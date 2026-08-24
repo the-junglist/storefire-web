@@ -17,6 +17,7 @@
             <li><NuxtLink to="/#how" class="text-sm text-gray-500 hover:text-sf-ice transition-colors">How it works</NuxtLink></li>
             <li><NuxtLink to="/#developers" class="text-sm text-gray-500 hover:text-sf-ice transition-colors">For developers</NuxtLink></li>
             <li><NuxtLink to="/#faq" class="text-sm text-gray-500 hover:text-sf-ice transition-colors">FAQ</NuxtLink></li>
+            <li><NuxtLink to="/system-check" class="text-sm text-gray-500 hover:text-sf-ice transition-colors">System check</NuxtLink></li>
           </ul>
         </div>
 
