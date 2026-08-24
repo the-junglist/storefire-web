@@ -12,15 +12,6 @@
         backgroundSize: '16px 16px',
       }"
     />
-    <!-- Sparse ice dots — cool accent between the fire grid -->
-    <div
-      class="absolute inset-0 transition-opacity duration-300"
-      :style="{
-        backgroundImage: 'radial-gradient(circle, rgba(34, 211, 238, 0.35) 1.5px, transparent 1.5px)',
-        backgroundSize: '96px 96px',
-        backgroundPosition: '40px 24px',
-      }"
-    />
     <!-- Cursor glow — fire -->
     <div
       class="absolute transition-opacity duration-500"
